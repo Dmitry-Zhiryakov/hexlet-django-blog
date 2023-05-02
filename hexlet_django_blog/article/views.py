@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.views import View
 from hexlet_django_blog.article.models import Article
 from django.forms import ModelForm
+from django.contrib import messages
 
 
 class ArticleForm(ModelForm):
@@ -38,5 +39,6 @@ class ArticleFormCreateView(View):
         form = ArticleForm(request.POST)
         if form.is_valid():
             form.save()
+            messages.add_message(request, messages.INFO, 'Статья добавлена')
             return redirect('articles_index')
         return render(request, 'articles/create.html', {'form': form})

@@ -10,6 +10,13 @@
             <li><a href="/">Главная</a></li>
             <li><a href="/articles/">Статьи</a></li>
         </ul>
+        {% if messages %}
+            <ul class="messages">
+            {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
     {% endblock %}
 </div>
 <div id="content">
