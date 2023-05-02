@@ -4,7 +4,7 @@ Got acquainted with CRUD and Django Admin.
 
 Learned how to:
 
-Create websites using Django;
-Configure the framework;
-Use a template system;
-Interact with the database via ORM.
+- Create websites using Django;
+- Configure the framework;
+- Use a template system;
+- Interact with the database via ORM.
